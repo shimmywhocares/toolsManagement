@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shimmy.toolsmanagement.MainActivity">
+
+    <Button
+        android:id="@+id/btnWantToHave"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Your Wishlist"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btnUsedTools"
+        app:layout_constraintStart_toStartOf="@+id/btnUsedTools"
+        app:layout_constraintTop_toBottomOf="@+id/btnUsedTools" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/aldrich"
+        android:text="My Tools Manager"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <Button
+        android:id="@+id/btnAllTools"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="See All Tools"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <Button
+        android:id="@+id/btnCurrentlyTaken"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Currently Taken Tools"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btnAllTools"
+        app:layout_constraintStart_toStartOf="@+id/btnAllTools"
+        app:layout_constraintTop_toBottomOf="@+id/btnAllTools" />
+
+    <Button
+        android:id="@+id/btnUsedTools"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Already Used Tools"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btnCurrentlyTaken"
+        app:layout_constraintStart_toStartOf="@+id/btnCurrentlyTaken"
+        app:layout_constraintTop_toBottomOf="@+id/btnCurrentlyTaken" />
+
+    <Button
+        android:id="@+id/btnFavorite"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="See Your Favorites"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/btnWantToHave"
+        app:layout_constraintStart_toStartOf="@+id/btnWantToHave"
+        app:layout_constraintTop_toBottomOf="@+id/btnWantToHave" />
+
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="About"
+        app:layout_constraintEnd_toEndOf="@+id/btnFavorite"
+        app:layout_constraintStart_toStartOf="@+id/btnFavorite"
+        app:layout_constraintTop_toBottomOf="@+id/btnFavorite" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/androidtools"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtLicence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Developed by Shimmy"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAbout"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

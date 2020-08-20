@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    app:cardCornerRadius="5dp"
+    android:elevation="7dp"
+    android:layout_margin="4dp">
+    
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/collapseRelLayout">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:id="@+id/imgTool"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtToolName"
+                android:text="Tool Name"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_below="@+id/imgTool"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtManufacturer"
+                android:text="Manufacturer"
+                android:textStyle="normal"
+                android:textSize="12dp"
+                android:layout_below="@+id/txtToolName"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/btnDownArrow"
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/imgTool"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_down_arrow" />
+
+
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/collapseRelLayout"
+            android:id="@+id/expandedRelLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:id="@+id/txtStatus"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtStatus"
+                android:text="Place of Staying"
+                android:id="@+id/txtPlaceOfStaying"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtPlaceOfStaying"
+                android:text="Holder"
+                android:id="@+id/txtHolder"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHolder"
+                android:text="Hours of usage"
+                android:id="@+id/txtHoursOfUsage"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHoursOfUsage"
+                android:text="Tool Id"
+                android:id="@+id/txtToolID"/>
+
+            <ImageView
+                android:id="@+id/btnUpArrow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/txtToolID"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-14dp"
+                android:src="@drawable/ic_up_arrow" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    
+
+
+
+</com.google.android.material.card.MaterialCardView>
