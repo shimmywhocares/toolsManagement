@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtToolName"
+                android:id="@+id/textViewToolName"
                 android:text="Tool Name"
                 android:textStyle="bold"
                 android:textSize="16dp"
@@ -37,11 +37,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtManufacturer"
+                android:id="@+id/textViewManufacturer"
                 android:text="Manufacturer"
                 android:textStyle="normal"
                 android:textSize="12dp"
-                android:layout_below="@+id/txtToolName"
+                android:layout_below="@+id/textViewToolName"
                 android:layout_centerHorizontal="true"/>
 
             <ImageView
@@ -70,17 +70,17 @@
                 android:text="Status"
                 android:id="@+id/txtStatus"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtStatus"
-                android:text="Place of Staying"
-                android:id="@+id/txtPlaceOfStaying"/>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/txtStatus"-->
+<!--                android:text="Place of Staying"-->
+<!--                android:id="@+id/txtPlaceOfStaying"/>-->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txtPlaceOfStaying"
+                android:layout_below="@id/txtStatus"
                 android:text="Holder"
                 android:id="@+id/txtHolder"/>
 

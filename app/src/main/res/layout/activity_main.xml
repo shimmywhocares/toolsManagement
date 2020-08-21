@@ -10,11 +10,11 @@
         android:id="@+id/btnWantToHave"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:text="Your Wishlist"
+        android:text="See Your Wishlist"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/btnUsedTools"
-        app:layout_constraintStart_toStartOf="@+id/btnUsedTools"
-        app:layout_constraintTop_toBottomOf="@+id/btnUsedTools" />
+        app:layout_constraintEnd_toEndOf="@+id/btnCurrentlyTaken"
+        app:layout_constraintStart_toStartOf="@+id/btnCurrentlyTaken"
+        app:layout_constraintTop_toBottomOf="@+id/btnCurrentlyTaken" />
 
     <TextView
         android:id="@+id/txtName"
@@ -57,9 +57,9 @@
         android:layout_height="wrap_content"
         android:text="Already Used Tools"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/btnCurrentlyTaken"
-        app:layout_constraintStart_toStartOf="@+id/btnCurrentlyTaken"
-        app:layout_constraintTop_toBottomOf="@+id/btnCurrentlyTaken" />
+        app:layout_constraintEnd_toEndOf="@+id/btnFavorite"
+        app:layout_constraintStart_toStartOf="@+id/btnFavorite"
+        app:layout_constraintTop_toBottomOf="@+id/btnFavorite" />
 
     <Button
         android:id="@+id/btnFavorite"
@@ -75,11 +75,11 @@
         android:id="@+id/btnAbout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:text="About"
-        app:layout_constraintEnd_toEndOf="@+id/btnFavorite"
-        app:layout_constraintStart_toStartOf="@+id/btnFavorite"
-        app:layout_constraintTop_toBottomOf="@+id/btnFavorite" />
+        app:layout_constraintEnd_toEndOf="@+id/btnUsedTools"
+        app:layout_constraintStart_toStartOf="@+id/btnUsedTools"
+        app:layout_constraintTop_toBottomOf="@+id/btnUsedTools" />
 
     <ImageView
         android:id="@+id/imgLogo"
