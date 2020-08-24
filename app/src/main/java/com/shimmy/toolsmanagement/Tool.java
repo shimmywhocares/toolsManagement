@@ -1,7 +1,7 @@
 package com.shimmy.toolsmanagement;
 
 public class Tool {
-    private  id;
+    private int id;
     private String name;
     private String manufacturer;
     private String dimensions;
@@ -12,11 +12,7 @@ public class Tool {
     private String shortDesc;
     private boolean isExpanded;
 
-
-
-    public Tool(long id, String name, String manufacturer, String dimensions, String status, String holder, float hoursOfUsage,
-                String imageUrl,
-                String shortDesc) {
+    public Tool(int id, String name, String manufacturer, String dimensions, String status, String holder, float hoursOfUsage, String imageUrl, String shortDesc) {
         this.id = id;
         this.name = name;
         this.manufacturer = manufacturer;
@@ -29,11 +25,11 @@ public class Tool {
         isExpanded = false;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
