@@ -1,10 +1,10 @@
 package com.shimmy.toolsmanagement;
 
 public class Tool {
-    private int id;
+    private  id;
     private String name;
     private String manufacturer;
-    private String placeOfStaying;
+    private String dimensions;
     private String status;
     private String holder;
     private float hoursOfUsage ;
@@ -12,11 +12,15 @@ public class Tool {
     private String shortDesc;
     private boolean isExpanded;
 
-    public Tool(int id, String name, String manufacturer, String placeOfStaying, String status, String holder, float hoursOfUsage, String imageUrl, String shortDesc) {
+
+
+    public Tool(long id, String name, String manufacturer, String dimensions, String status, String holder, float hoursOfUsage,
+                String imageUrl,
+                String shortDesc) {
         this.id = id;
         this.name = name;
         this.manufacturer = manufacturer;
-        this.placeOfStaying = placeOfStaying;
+        this.dimensions = dimensions;
         this.status = status;
         this.holder = holder;
         this.hoursOfUsage = hoursOfUsage;
@@ -25,11 +29,11 @@ public class Tool {
         isExpanded = false;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -49,12 +53,12 @@ public class Tool {
         this.manufacturer = manufacturer;
     }
 
-    public String getPlaceOfStaying() {
-        return placeOfStaying;
+    public String getDimensions() {
+        return dimensions;
     }
 
-    public void setPlaceOfStaying(String placeOfStaying) {
-        this.placeOfStaying = placeOfStaying;
+    public void setDimensions(String dimensions) {
+        this.dimensions = dimensions;
     }
 
     public String getStatus() {
@@ -111,7 +115,7 @@ public class Tool {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", manufacturer='" + manufacturer + '\'' +
-                ", placeOfStaying='" + placeOfStaying + '\'' +
+                ", dimensions='" + dimensions + '\'' +
                 ", status='" + status + '\'' +
                 ", holder='" + holder + '\'' +
                 ", hoursOfUsage=" + hoursOfUsage +
