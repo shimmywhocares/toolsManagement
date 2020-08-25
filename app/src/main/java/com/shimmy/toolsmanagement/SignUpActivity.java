@@ -3,6 +3,7 @@ package com.shimmy.toolsmanagement;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,15 +16,20 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SignUpActivity extends AppCompatActivity {
     private static final String TAG = "SignUpActivity";
 
+    private TextView txtTest;
     private EditText editTxtPersonName, editTxtEmail, editTxtPassword, editTxtPassRepeat;
     private Button btnSignUp;
     //private TextView txtWarnName, txtWarnEmail, txtWarnPass, txtWarnPassRepeat;
     private RadioGroup rbGender;
     private CheckBox agreementCheck;
     private ConstraintLayout parentConstLaySignUpActivity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +56,21 @@ public class SignUpActivity extends AppCompatActivity {
         btnSignUp = findViewById(R.id.btnAddTool);
 
         parentConstLaySignUpActivity = findViewById(R.id.parentConstLaySignUpActivity);
-        
-        
+
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 initSignUp();
             }
         });
+
+
+//        Intent callingIntent = getIntent();
+//        String receivedBarcode = callingIntent.getStringExtra("BARCODE_CAPTURE");
+        Log.d(TAG, "initView: Did I get the package or not");
+        txtTest = findViewById(R.id.txtTest);
+        txtTest.setText(ToolsRepository.getInstance().getIncomingBarcodeId());
+
 
 
     }

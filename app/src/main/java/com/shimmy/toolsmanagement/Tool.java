@@ -12,7 +12,11 @@ public class Tool {
     private String shortDesc;
     private boolean isExpanded;
 
-    public Tool(int id, String name, String manufacturer, String dimensions, String status, String holder, float hoursOfUsage, String imageUrl, String shortDesc) {
+
+
+    public Tool(int id, String name, String manufacturer, String dimensions, String status, String holder, float hoursOfUsage,
+                String imageUrl,
+                String shortDesc) {
         this.id = id;
         this.name = name;
         this.manufacturer = manufacturer;

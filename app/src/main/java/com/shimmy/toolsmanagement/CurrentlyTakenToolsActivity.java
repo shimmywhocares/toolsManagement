@@ -6,13 +6,29 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class CurrentlyTakenToolsActivity extends AppCompatActivity {
+
+    private FloatingActionButton fabCurrentluTaken;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_currently_taken_tools);
+
+        fabCurrentluTaken = findViewById(R.id.fabCurrentlyTaken);
+        fabCurrentluTaken.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ToolsRepository.getInstance().removeFromCurrentlyTaken("2000");
+                //TODO: boolean
+                Toast.makeText(CurrentlyTakenToolsActivity.this, "Tool removed ", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         RecyclerView currentlyTakenRecView = findViewById(R.id.currentlyTakenToolsRecView);
         ToolRecViewAdapter adapter = new ToolRecViewAdapter(this);

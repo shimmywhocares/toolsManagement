@@ -94,6 +94,7 @@ public class ToolRecViewAdapter extends RecyclerView.Adapter<ToolRecViewAdapter.
         return toolsList.size();
     }
 
+
     public void setToolsArrayList(List<Tool> toolList) {
         this.toolsList = toolList;
         //we're going to refresh the data in recycler view

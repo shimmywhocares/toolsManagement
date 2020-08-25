@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".CurrentlyTakenToolsActivity">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fabCurrentlyTaken"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_camera_scanner"
+
+        app:backgroundTint="@color/colorAccent"
+        app:rippleColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/currentlyTakenToolsRecView"
         android:layout_width="wrap_content"
