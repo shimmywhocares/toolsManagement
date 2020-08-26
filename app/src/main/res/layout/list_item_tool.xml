@@ -9,7 +9,7 @@
     android:layout_margin="4dp">
     
     <RelativeLayout
-        android:layout_width="200dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content">
 
         <RelativeLayout
@@ -18,7 +18,7 @@
             android:id="@+id/collapseRelLayout">
 
             <ImageView
-                android:layout_width="200dp"
+                android:layout_width="228dp"
                 android:layout_height="180dp"
                 android:id="@+id/imgTool"
                 android:src="@mipmap/ic_launcher"/>
@@ -64,39 +64,42 @@
             android:layout_below="@id/collapseRelLayout"
             android:id="@+id/expandedRelLayout">
 
+
             <TextView
+                android:id="@+id/txtStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Status"
-                android:id="@+id/txtStatus"/>
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@+id/txtStatus"-->
-<!--                android:text="Place of Staying"-->
-<!--                android:id="@+id/txtPlaceOfStaying"/>-->
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="3dp"
+                android:text="Status" />
 
             <TextView
+                android:id="@+id/txtHolder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtStatus"
-                android:text="Holder"
-                android:id="@+id/txtHolder"/>
+                android:layout_alignStart="@+id/txtStatus"
+
+                android:text="Holder" />
 
             <TextView
+                android:id="@+id/txtHoursOfUsage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtHolder"
-                android:text="Hours of usage"
-                android:id="@+id/txtHoursOfUsage"/>
+                android:layout_alignStart="@+id/txtHolder"
+                android:text="Hours of usage" />
 
             <TextView
+                android:id="@+id/txtToolID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtHoursOfUsage"
-                android:text="Tool Id"
-                android:id="@+id/txtToolID"/>
+                android:layout_alignStart="@+id/txtHoursOfUsage"
+
+                android:text="Tool Id" />
 
             <ImageView
                 android:id="@+id/btnUpArrow"
@@ -106,6 +109,38 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="-14dp"
                 android:src="@drawable/ic_up_arrow" />
+
+            <TextView
+                android:id="@+id/txtStatusConst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:text="Status:" />
+            <TextView
+                android:id="@+id/txtHolderConst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtStatusConst"
+                android:layout_alignStart="@+id/txtStatusConst"
+                android:text="Holder:" />
+            <TextView
+                android:id="@+id/txtHoursOfUsageConst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHolderConst"
+                android:layout_alignStart="@+id/txtHolderConst"
+                android:text="Time of use [h]:" />
+            <TextView
+                android:id="@+id/txtToolIDConst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHoursOfUsageConst"
+                android:layout_alignStart="@+id/txtHoursOfUsageConst"
+                android:text="Tool Id:" />
+
 
         </RelativeLayout>
 

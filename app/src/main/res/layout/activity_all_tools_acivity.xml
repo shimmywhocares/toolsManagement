@@ -14,4 +14,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="1dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fabAddTool"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_add_white"
+
+        app:backgroundTint="@color/colorAccent"
+        app:rippleColor="#0D1A68"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="15dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

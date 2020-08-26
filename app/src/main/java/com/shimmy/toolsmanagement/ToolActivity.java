@@ -12,14 +12,13 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ToolActivity extends AppCompatActivity {
 
     public static final String TOOL_ID_KEY = "toolId";
 
-    private TextView txtToolName, txtManufacturer;
+    private TextView txtToolName, txtManufacturer, txtDimensions, txtStatus, txtHolder, txtHoursOfUsage, txtToolId, txtDesc;
     private Button btnAddToCurrentlyTaken, btnAddToWishlist, btnAddToFavorites;
     private ImageView toolimgView;
 
@@ -38,32 +37,14 @@ public class ToolActivity extends AppCompatActivity {
             if (toolId != -1){
                 Tool incomingTool = ToolsRepository.getInstance().getToolById(toolId);
                 if (incomingTool != null){
-                    setData(incomingTool);
+                    setDataToDisplay(incomingTool);
 
                     handleCurrentlyTakenTools(incomingTool);
                     handleWantToHaveTools(incomingTool);
                     handleFavoritesTools(incomingTool);
-                    handleAlreadyUsedTools(incomingTool);
+
                 }
             }
-        }
-    }
-
-    private void handleAlreadyUsedTools(final Tool incomingTool) {
-        List<Tool> alreadyUsedTools = ToolsRepository.getInstance().getAlreadyUsedTools();
-
-        boolean existInAlreadyUsedTools = false;
-
-        for (Tool t: alreadyUsedTools){
-            if (t.getId() == incomingTool.getId()){
-                existInAlreadyUsedTools = true;
-            }
-        }
-        if (existInAlreadyUsedTools){
-            //TODO: logic for handling the History of Usage - AlreadyUsedTools form CurrentlyTaken
-            //there is no button now: btnAddToCurrentlyTaken.setEnabled(false);
-        }else {
-
         }
     }
 
@@ -166,17 +147,28 @@ public class ToolActivity extends AppCompatActivity {
     }
 
 
-    private void setData(Tool tool){
+    private void setDataToDisplay(Tool tool){
         txtToolName.setText(tool.getName());
         txtManufacturer.setText(tool.getManufacturer());
+        txtDimensions.setText(tool.getDimensions());
+        txtStatus.setText(tool.getStatus());
+        txtHolder.setText(tool.getHolder());
+        txtHoursOfUsage.setText(String.valueOf(tool.getHoursOfUsage()));
+        txtToolId.setText(String.valueOf(tool.getId()));
+        txtDesc.setText(tool.getShortDesc());
         Glide.with(this)
                 .asBitmap().load(tool.getImageUrl())
                 .into(toolimgView);
     }
-
     private void initView() {
-        txtToolName = findViewById(R.id.txtToolName);
-        txtManufacturer = findViewById(R.id.txtManufacturer);
+        txtToolName = findViewById(R.id.txtSetToolName);
+        txtManufacturer = findViewById(R.id.txtSetManufacturer);
+        txtDimensions = findViewById(R.id.txtSetDimensions);
+        txtStatus = findViewById(R.id.txtSetStatus);
+        txtHolder = findViewById(R.id.txtSetHolder);
+        txtHoursOfUsage = findViewById(R.id.txtSetHoursOfUsage);
+        txtToolId = findViewById(R.id.txtSetToolId);
+        txtDesc = findViewById(R.id.txtSetDescription);
 
         btnAddToCurrentlyTaken = findViewById(R.id.btnAddToCurrentlyTaken);
         btnAddToFavorites = findViewById(R.id.btnAddToFavorites);

@@ -9,9 +9,10 @@
 
     <ImageView
         android:id="@+id/imgTool"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="8dp"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -44,7 +45,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Dimensions"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/editTxtManufacturer" />
 
@@ -53,8 +54,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Short Desc"
-        android:inputType="textPassword"
+        android:hint="Description"
+        android:inputType="textLongMessage"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/editTxtDimensions" />
 
@@ -74,25 +75,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="50dp" />
+        app:layout_constraintGuide_begin="24dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="146dp" />
+        app:layout_constraintGuide_begin="175dp" />
 
     <Button
         android:id="@+id/btnAddPick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Pick Image"
+        android:text="Pick an Image"
 
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgTool"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxData"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Data Entered Correctly"
+
+        app:layout_constraintBottom_toTopOf="@+id/editTxtDimensions"
+        app:layout_constraintStart_toEndOf="@+id/editTxtManufacturer"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtManufacturer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

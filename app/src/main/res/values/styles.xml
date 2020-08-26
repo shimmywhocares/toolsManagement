@@ -3,7 +3,7 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#105993</item>
-        <item name="colorPrimaryDark">#0D1D77</item>
+        <item name="colorPrimaryDark">#0D1A68</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

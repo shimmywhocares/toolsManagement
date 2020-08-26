@@ -51,15 +51,20 @@ public class ToolsRepository {
     //DummyData for constructor
     private void initDummyData() {
         //TODO: add more initial data
-        toolsAll.add(new Tool(1000, "Wierto", "Sandvik", "Szafa nr 2", "W magazynie", "magazyn", 15, "https://images-na.ssl-images-amazon.com/images/I/71gHlVx1SRL._SL1500_.jpg", "wiertło sandvik super-extra-mega-wypas-do_metalu i do drewna"));
-        toolsAll.add(new Tool(2000, "Piła", "Husqvarna", "Szafa nr 5", "W lesie", "Staszek", 34, "https://www.forestandarb.com/res/Husqvarna%20120%20Mk%20II.jpg", "Piła łieeee łieeee!"));
-        toolsAll.add(new Tool(570242009, "Młotek", "STANLEY", "Szafa nr 0", "Przy kowadle", "Zbyszek", +100, "https://www.stanleytools" +
+        toolsAll.add(new Tool(1, "Wierto TE-CX (SDS+)", "HILTI", "fi 12mm x 150mm", "W magazynie", "magazyn", 9, "https://www.hilti" +
+                ".pl/medias/sys_master/images/h43/h78/9527053254686.jpg", "wiertło HILTI super-extra-mega-wypas-do_metalu i do drewna"));
+        toolsAll.add(new Tool(2, "Wierto ", "Sandvik", "fi 10mm x 200mm", "W magazynie", "magazyn", 5, "https://images-na.ssl-images-amazon" +
+                ".com/images/I/71gHlVx1SRL._SL1500_.jpg", "wiertło HILTI super-extra-mega-wypas-do_metalu i do drewna"));
+        toolsAll.add(new Tool(3, "Piła", "Husqvarna", "40cm 2,45KM", "W lesie", "Staszek", 34, "https://www.forestandarb" +
+                ".com/res/Husqvarna%20120%20Mk%20II.jpg", "Piła łieeee łieeee!"));
+        toolsAll.add(new Tool(570242009, "Młotek", "STANLEY", "30cm wysokości; obuch 1kg", "Przy kowadle", "Zbyszek", +100, "https://www" +
+                ".stanleytools" +
                 ".com/~/media/stanleytools/images/listing-images/antivibe_hammers.jpg", "Młotek stuk stuk buch buch!"));
     }
 
 
-    public void addTool(String name, String manufacturer){
-        toolsAll.add(new Tool(generateID(), name, manufacturer, "","", "", 567,"",""));
+    public void addTool(String name, String manufacturer, String dimensions, String shortDesc){
+        toolsAll.add(new Tool(generateID(), name, manufacturer, dimensions,"waiting for input", "waiting for input", 0,"", shortDesc));
 
     }
 
